@@ -8,7 +8,6 @@ const GANavTracker = {
 
     on(document.body, 'click', event => {
       let element = event.target;
-      event.preventDefault();
 
       if (!matches(element, 'a')) {
         element = closest(element, 'a');
