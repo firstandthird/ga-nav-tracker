@@ -13,13 +13,8 @@ npm install ga-nav-tracker
 import GANavTracker from 'ga-nav-tracker'
 ```
 
-### init([callback], [timeout])
+### init()
 Initializes library and all link clicks within the specified tag will be tracked in Google Analytics.
-
-#### Parameters
-`callback` - {function} Callback to fire when GA event is logged
-
-`timeout` - {Number} Timeout for callback call
 
 ## Example [(see example)](example/index.html)
 Add `data-nav-tracker="header|footer"` to any element and the library will track link clicks.

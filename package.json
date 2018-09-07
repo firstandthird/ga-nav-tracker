@@ -38,7 +38,6 @@
   },
   "homepage": "https://github.com/firstandthird/ga-nav-tracker#readme",
   "dependencies": {
-    "aug": "^2.0.1",
     "domassist": "^1.11.1",
     "ga-track": "^1.6.2"
   },

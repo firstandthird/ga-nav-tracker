@@ -1,9 +1,8 @@
-import aug from 'aug';
 import GATrack from 'ga-track';
 import { on, ready, closest, matches } from 'domassist';
 
 const GANavTracker = {
-  init(callback = null, timeout = 1000) {
+  init() {
     const selector = '[data-nav-tracker]';
 
     on(document.body, 'click', event => {
@@ -23,11 +22,6 @@ const GANavTracker = {
         return;
       }
 
-      const defaults = {
-        label: tracker.dataset.navTracker,
-        category: 'nav-tracker'
-      };
-
       const dropdown = closest(element, '[data-nav-tracker-dropdown]');
       let textLink = element.textContent.trim();
 
@@ -35,9 +29,26 @@ const GANavTracker = {
         textLink = `${dropdown.dataset.navTrackerDropdown} - ${textLink}`;
       }
 
-      const { category, action, label } = aug(defaults, { action: textLink });
+      const options = {
+        action: textLink,
+        category: 'nav-tracker',
+        label: tracker.dataset.navTracker
+      };
 
-      GATrack.sendEvent(category, action, label, callback, timeout);
+      const data = GATrack.getData(element, options);
+      const target = element.getAttribute('target');
+      let callback = null;
+
+      if (element.dataset.gaTrackHref === 'false') {
+        event.preventDefault();
+      } else if (data.href && !event.metaKey && event.which === 1 && target !== '_blank') {
+        event.preventDefault();
+        callback = () => {
+          window.location = data.href;
+        };
+      }
+
+      GATrack.sendEvent(data.category, data.action, data.label, callback);
     });
   }
 };
