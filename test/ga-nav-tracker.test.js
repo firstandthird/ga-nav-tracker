@@ -46,6 +46,7 @@ const setup = () => {
     </nav>
   `;
 
+  GANavTracking.init();
   window._gaq.clear(); // eslint-disable-line no-underscore-dangle
 };
 

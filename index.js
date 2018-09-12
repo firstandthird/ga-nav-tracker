@@ -1,16 +1,12 @@
 import GATrack from 'ga-track';
-import { on, ready, closest, matches } from 'domassist';
+import { on, ready, closest } from 'domassist';
 
 const GANavTracker = {
   init() {
     const selector = '[data-nav-tracker]';
 
-    on(document.body, 'click', event => {
-      let element = event.target;
-
-      if (!matches(element, 'a')) {
-        element = closest(element, 'a');
-      }
+    on('[data-nav-tracker] a', 'click', event => {
+      const element = event.target;
 
       let tracker;
 
