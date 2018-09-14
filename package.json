@@ -1,0 +1,68 @@
+{
+  "name": "ga-nav-tracker",
+  "version": "1.0.0",
+  "description": "Auto-track nav link clicks for Google Analytics",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/ga-nav-tracker.git"
+  },
+  "keywords": [
+    "browser",
+    "ga",
+    "analytics"
+  ],
+  "author": "First+Third",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firstandthird/ga-nav-tracker/issues"
+  },
+  "scripts": {
+    "start": "scriptkit",
+    "build": "scriptkit build",
+    "dev": "scriptkit dev",
+    "test": "cat test/ga-nav-tracker.test.dist.js | tape-run --static . --browser phantomjs --render tap-spec",
+    "prepublishOnly": "scriptkit"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": "firstandthird",
+    "plugins": [
+      "compat"
+    ],
+    "rules": {
+      "compat/compat": 2
+    }
+  },
+  "homepage": "https://github.com/firstandthird/ga-nav-tracker#readme",
+  "dependencies": {
+    "domassist": "^1.11.1",
+    "ga-track": "^1.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-firstandthird": "4.3.0",
+    "eslint-plugin-compat": "^2.5.1",
+    "eslint-plugin-import": "^2.14.0",
+    "phantomjs-prebuilt": "2.1.16",
+    "scriptkit": "0.4.0",
+    "tap-spec": "5.0.0",
+    "tape-rollup": "4.6.4",
+    "tape-run": "4.0.0"
+  },
+  "scriptkit": {
+    "files": {
+      "dist/ga-nav-tracker.js": "index.js",
+      "test/ga-nav-tracker.test.dist.js": "test/ga-nav-tracker.test.js"
+    },
+    "scripts": {
+      "babel": {
+        "exclude": [
+          "node_modules/tape-rollup/*"
+        ]
+      }
+    }
+  }
+}
