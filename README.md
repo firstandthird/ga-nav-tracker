@@ -1,4 +1,8 @@
 # Google Analytics Nav Tracker (ga-nav-tracker)
+
+[![Build Status](https://travis-ci.org/firstandthird/ga-nav-tracker.svg?branch=master)](https://travis-ci.org/firstandthird/ga-nav-tracker)
+<span class="ga-nav-tracker-npmversion"><a href="https://npmjs.org/package/ga-nav-tracker" title="View this project on NPM"><img src="https://img.shields.io/npm/v/ga-nav-tracker.svg" alt="NPM version" /></a></span>
+
 Auto-track link clicks for Google Analytics.
 
 > This library uses [ga-track](https://github.com/firstandthird/ga-track) and needs [Google Analytics](https://developers.google.com/analytics/devguides/collection/analyticsjs/) to be set up in order to work.
@@ -64,7 +68,7 @@ Clicking on the second link will send this object to Google Analytics:
 
 ### MIT License
 
-Copyright (c) 2018 First+Third
+Copyright (c) 2019 First+Third
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
