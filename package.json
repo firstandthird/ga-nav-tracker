@@ -39,14 +39,14 @@
   },
   "homepage": "https://github.com/firstandthird/ga-nav-tracker#readme",
   "dependencies": {
-    "domassist": "^2.0.2",
-    "ga-track": "^2.0.0"
+    "domassist": "^2.1.0",
+    "ga-track": "^2.1.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-firstandthird": "4.3.0",
-    "eslint-plugin-compat": "^3.1.0",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-compat": "^3.1.2",
+    "eslint-plugin-import": "^2.17.3",
     "phantomjs-prebuilt": "2.1.16",
     "scriptkit": "2.0.1",
     "tap-spec": "5.0.0",
