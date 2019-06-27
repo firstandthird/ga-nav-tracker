@@ -3,7 +3,7 @@
   "version": "2.0.2",
   "description": "Auto-track nav link clicks for Google Analytics",
   "main": "index.js",
-  "module": "dist/ga-nav-tracker.esm.js",
+  "module": "dist/ga-nav-tracker.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/firstandthird/ga-nav-tracker.git"
@@ -22,7 +22,8 @@
     "start": "scriptkit",
     "build": "scriptkit build",
     "dev": "scriptkit dev",
-    "test": "cat test/ga-nav-tracker.test.dist.js | tape-run --static . --browser phantomjs --render tap-spec",
+    "test": "cat test/ga-nav-tracker.test.dist.bundle.js | tape-run --static . --browser phantomjs --render tap-spec",
+    "pretest": "scriptkit build",
     "prepublishOnly": "scriptkit"
   },
   "eslintConfig": {
@@ -39,19 +40,19 @@
   },
   "homepage": "https://github.com/firstandthird/ga-nav-tracker#readme",
   "dependencies": {
-    "domassist": "^2.1.0",
-    "ga-track": "^2.1.0"
+    "domassist": "^2.2.0",
+    "ga-track": "^2.2.0"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-firstandthird": "4.3.0",
-    "eslint-plugin-compat": "^3.1.2",
-    "eslint-plugin-import": "^2.17.3",
-    "phantomjs-prebuilt": "2.1.16",
-    "scriptkit": "2.0.1",
-    "tap-spec": "5.0.0",
-    "tape-rollup": "4.6.4",
-    "tape-run": "5.0.0"
+    "eslint": "^6.0.1",
+    "eslint-config-firstandthird": "^4.4.0",
+    "eslint-plugin-compat": "^3.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "phantomjs-prebuilt": "^2.1.16",
+    "scriptkit": "^3.0.0",
+    "tap-spec": "^5.0.0",
+    "tape-rollup": "^4.6.4",
+    "tape-run": "^6.0.0"
   },
   "scriptkit": {
     "files": {

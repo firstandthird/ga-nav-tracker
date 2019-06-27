@@ -8,20 +8,25 @@ Auto-track link clicks for Google Analytics.
 > This library uses [ga-track](https://github.com/firstandthird/ga-track) and needs [Google Analytics](https://developers.google.com/analytics/devguides/collection/analyticsjs/) to be set up in order to work.
 
 ## Installation
+
 ```sh
 npm install ga-nav-tracker
 ```
 
 ## Usage
+
 ```js
 import GANavTracker from 'ga-nav-tracker'
 ```
 
 ### init()
+
 Initializes library and all link clicks within the specified tag will be tracked in Google Analytics.
 
 ## Example [(see example)](example/index.html)
+
 Add `data-nav-tracker="header|footer"` to any element and the library will track link clicks.
+
 ```html
 <nav>
   <ul data-nav-tracker="header">
@@ -32,6 +37,7 @@ Add `data-nav-tracker="header|footer"` to any element and the library will track
 ```
 
 Clicking on the first link will be send this object to Google Analytics:
+
 ```js
 {
   action: 'header'
@@ -41,6 +47,7 @@ Clicking on the first link will be send this object to Google Analytics:
 ```
 
 You can optionally set `data-nav-tracker-dropdown`, which prepends tracker location to the label property. See the example below:
+
 ```html
 <nav>
   <ul data-nav-tracker="header">
@@ -56,6 +63,7 @@ You can optionally set `data-nav-tracker-dropdown`, which prepends tracker locat
 ```
 
 Clicking on the second link will send this object to Google Analytics:
+
 ```js
 {
   action: 'header'
