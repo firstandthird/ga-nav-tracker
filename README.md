@@ -1,7 +1,7 @@
 # Google Analytics Nav Tracker (ga-nav-tracker)
 
 [![Build Status](https://travis-ci.org/firstandthird/ga-nav-tracker.svg?branch=master)](https://travis-ci.org/firstandthird/ga-nav-tracker)
-<span class="ga-nav-tracker-npmversion"><a href="https://npmjs.org/package/ga-nav-tracker" title="View this project on NPM"><img src="https://img.shields.io/npm/v/ga-nav-tracker.svg" alt="NPM version" /></a></span>
+![npm](https://img.shields.io/npm/v/ga-nav-tracker.svg)
 
 Auto-track link clicks for Google Analytics.
 
