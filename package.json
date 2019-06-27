@@ -1,6 +1,6 @@
 {
   "name": "ga-nav-tracker",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "Auto-track nav link clicks for Google Analytics",
   "main": "index.js",
   "module": "dist/ga-nav-tracker.js",
