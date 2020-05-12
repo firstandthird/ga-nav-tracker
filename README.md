@@ -76,7 +76,7 @@ Clicking on the second link will send this object to Google Analytics:
 
 ### MIT License
 
-Copyright (c) 2019 First+Third
+Copyright (c) 2020 First+Third
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
